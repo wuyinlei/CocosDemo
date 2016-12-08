@@ -1,0 +1,26 @@
+cc.Class({
+    extends: cc.Component,
+
+    properties: {
+        labelStatus: cc.Label,
+        webview: cc.WebView,
+        url: cc.EditBox
+    },
+
+    
+    onWebFinishLoad: function(sender,event){
+        var loadStatus = "";
+        if(event === cc.WebView.EventType.LOADED){
+            loadStatus = " is loaded!";
+        } else if(event === cc.WebView.EventType.LOADING){
+            loadStatus = "is loading!";
+        } else if(event === cc.WebView.EventType.ERROR){
+            loadStatus = " load error!";
+        }
+        this.loadStatus.string = this.url.string + loadStatus;
+    },
+    
+    visitURL: function(){
+        this.webview.url = this.url.string;
+    }
+});

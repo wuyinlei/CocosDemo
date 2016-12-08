@@ -1,0 +1,17 @@
+{
+  "excludeScenes": [],
+  "includeAnySDK": false,
+  "includeSdk": [
+    "anysdk"
+  ],
+  "orientation": {
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
+    "upsideDown": false
+  },
+  "packageName": "org.cocos2d.Example",
+  "startScene": "ab1f08d9-4d07-43c7-9fbd-2ab4f0b18f1c",
+  "title": "Example",
+  "webOrientation": "auto"
+}
