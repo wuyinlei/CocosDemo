@@ -25,7 +25,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-    	this.content = this.scrollView.content;
+    	this.content = this.scrollView.content;  // scrollview内容
         this.items = []; // array to store spawned items
     	this.initialize();
         this.updateTimer = 0;
@@ -37,7 +37,7 @@ cc.Class({
         this.content.height = this.totalCount * (this.itemTemplate.height + this.spacing) + this.spacing; // get total content height
     	for (let i = 0; i < this.spawnCount; ++i) { // spawn items, we only need to do this once
     		let item = cc.instantiate(this.itemTemplate);
-    		this.content.addChild(item);
+    		this.content.addChild(item); // add 子节点
     		item.setPosition(0, -item.height * (0.5 + i) - this.spacing * (i + 1));
     		item.getComponent('Item').updateItem(i, i);
             this.items.push(item);
